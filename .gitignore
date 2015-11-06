@@ -1,3 +1,4 @@
 composer.phar
 .env
 vendor/
+*.log
