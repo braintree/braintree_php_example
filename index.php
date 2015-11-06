@@ -5,6 +5,12 @@
 </head>
 <body>
     <h1>Checkout</h1>
+    <?php
+        if(isset($_SESSION["errors"])) {
+            echo($_SESSION["errors"]);
+            unset($_SESSION["errors"]);
+        }
+    ?>
     <form method="post" id="checkout" action="/checkout.php">
         <label for="amount">Amount</label>
         <input type="text" name="amount" id="amount" value="10.00">
