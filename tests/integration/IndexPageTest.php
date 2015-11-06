@@ -24,6 +24,20 @@ class IndexPageTest extends PHPUnit_Framework_TestCase
         $output = curl_exec($curl);
         curl_close($curl);
 
-        $this->assertRegExp('/var client_token = ".*==";/', $output);
+        $this->assertRegExp('/var client_token = ".*";/', $output);
     }
+
+    function test_checkoutFormOnPage()
+    {
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, "localhost:3000");
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        $output = curl_exec($curl);
+        curl_close($curl);
+
+        $this->assertRegExp('/<form method="post" id="checkout"/', $output);
+        $this->assertRegExp('/<div id="payment-form"/', $output);
+        $this->assertRegExp('/<input type="text" name="amount" id="amount"/', $output);
+    }
+
 }
