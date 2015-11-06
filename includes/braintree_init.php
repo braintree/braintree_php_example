@@ -1,8 +1,8 @@
 <?php
 session_start();
-require_once("vendor/autoload.php");
+require_once("../vendor/autoload.php");
 
-$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv = new Dotenv\Dotenv(__DIR__ . "/../");
 $dotenv->load();
 
 Braintree\Configuration::environment(getenv('BT_ENVIRONMENT'));

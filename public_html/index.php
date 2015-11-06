@@ -1,4 +1,4 @@
-<?php require_once("braintree_init.php"); ?>
+<?php require_once("../includes/braintree_init.php"); ?>
 
 <html>
 <head>
