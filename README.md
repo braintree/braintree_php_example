@@ -3,7 +3,7 @@ An example Braintree integration for PHP.
 
 ## Setup Instructions
 
-1. Install composer. You can find instructions on how to install composer [on composer's site](https://getcomposer.org/download/).
+1. Install composer within the example directory. You can find instructions on how to install composer [on composer's site](https://getcomposer.org/download/).
 
 2. Run composer
   `php composer.phar install`
