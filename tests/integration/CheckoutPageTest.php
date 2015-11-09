@@ -78,4 +78,30 @@ class CheckoutPageTest extends PHPUnit_Framework_TestCase
         $this->assertRegExp('/\/index.php/', $redirectUrl);
         $this->assertRegExp('/Cannot use a paymentMethodNonce more than once./', $output);
     }
+
+    function test_displaysStatusOnProcessorAndGatewayErrors()
+    {
+        $fields = array(
+            'amount' => 2000,
+            'payment_method_nonce' => "fake-valid-nonce"
+        );
+
+        $fields_string = "";
+        foreach($fields as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
+        rtrim($fields_string, '&');
+
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, "localhost:3000/checkout.php");
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $fields_string);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
+        curl_setopt($curl, CURLOPT_COOKIEFILE, "");
+        $output = curl_exec($curl);
+
+        $redirectUrl = curl_getinfo($curl, CURLINFO_EFFECTIVE_URL);
+        curl_close($curl);
+
+        $this->assertRegExp('/\/transaction.php\?id=/', $redirectUrl);
+        $this->assertRegExp('/Transaction status - processor_declined/', $output);
+    }
 }

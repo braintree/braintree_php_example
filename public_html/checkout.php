@@ -12,6 +12,10 @@ $result = Braintree\Transaction::sale([
 if ($result->success){
     $transaction = $result->transaction;
     header("Location: transaction.php?id=" . $transaction->id);
+} elseif (!is_null($result->transaction)){
+    $transaction = $result->transaction;
+    $_SESSION["errors"] = "Transaction status - " . $result->transaction->status;
+    header("Location: transaction.php?id=" . $transaction->id);
 } else {
     $errorString = "";
 
@@ -21,5 +25,4 @@ if ($result->success){
 
     $_SESSION["errors"] = $errorString;
     header("Location: index.php");
-
 }
