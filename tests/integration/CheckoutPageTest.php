@@ -69,7 +69,7 @@ class CheckoutPageTest extends PHPUnit_Framework_TestCase
         curl_setopt($curl, CURLOPT_POSTFIELDS, $fields_string);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
-        curl_setopt($curl, CURLOPT_COOKIEFILE, "");
+        curl_setopt($curl, CURLOPT_COOKIEFILE, "/dev/null");
         $output = curl_exec($curl);
 
         $redirectUrl = curl_getinfo($curl, CURLINFO_EFFECTIVE_URL);
@@ -95,7 +95,7 @@ class CheckoutPageTest extends PHPUnit_Framework_TestCase
         curl_setopt($curl, CURLOPT_POSTFIELDS, $fields_string);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
-        curl_setopt($curl, CURLOPT_COOKIEFILE, "");
+        curl_setopt($curl, CURLOPT_COOKIEFILE, "/dev/null");
         $output = curl_exec($curl);
 
         $redirectUrl = curl_getinfo($curl, CURLINFO_EFFECTIVE_URL);
