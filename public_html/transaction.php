@@ -1,5 +1,5 @@
 <?php
-    require_once("braintree_init.php");
+    require_once("../includes/braintree_init.php");
     if (isset($_GET["id"])) {
       $transaction = Braintree\Transaction::find($_GET["id"]);
     }

@@ -8,6 +8,6 @@
   <php>
     <const name="WEB_SERVER_HOST" value="localhost" />
     <const name="WEB_SERVER_PORT" value="3000" />
-    <const name="WEB_SERVER_DOCROOT" value="." />
+    <const name="WEB_SERVER_DOCROOT" value="./public_html" />
   </php>
 </phpunit>

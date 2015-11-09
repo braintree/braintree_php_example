@@ -14,7 +14,7 @@ An example Braintree integration for PHP.
 3. Copy the `example.env` file to `.env` and fill in your Braintree API credentials. Credentials can be found by navigating to Account > My user > View API Keys in the Braintree control panel. Full instructions can be [found on our support site](https://articles.braintreepayments.com/control-panel/important-gateway-credentials#api-credentials).
 
 4. Start the internal PHP server on port 3000
-   `php -S localhost:3000`
+   `php -S localhost:3000 -t public_html`
 
 ## Running Tests
 
@@ -22,7 +22,7 @@ All tests are integration tests. Integration tests make api calls to Braintree a
 
 ## Pro Tips
 
- * Run `php -S 0.0.0.0:3000` when launching the internal PHP server to listen on all interfaces on port 3000.
+ * Run `php -S 0.0.0.0:3000 -t public_html` when launching the internal PHP server to listen on all interfaces on port 3000.
 
 ## Disclaimer
 
