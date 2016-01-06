@@ -2,6 +2,7 @@
 
 <html>
 <head>
+    <title>BraintreePHPExample</title>
 </head>
 <body>
     <?php

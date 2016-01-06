@@ -1,3 +1,7 @@
+<html>
+<head>
+    <title>BraintreePHPExample</title>
+</head>
 <?php
     require_once("../includes/braintree_init.php");
 
@@ -127,3 +131,5 @@
 <p>
     <a href="/index.php">Return to checkout page</a>
 </p>
+</body>
+</html>
