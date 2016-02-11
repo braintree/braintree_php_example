@@ -76,7 +76,7 @@ class CheckoutPageTest extends PHPUnit_Framework_TestCase
         curl_close($curl);
 
         $this->assertRegExp('/\/index.php/', $redirectUrl);
-        $this->assertRegExp('/Cannot use a paymentMethodNonce more than once./', $output);
+        $this->assertRegExp('/Error: 91564: Cannot use a paymentMethodNonce more than once./', $output);
     }
 
     function test_displaysStatusOnProcessorAndGatewayErrors()
