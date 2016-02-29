@@ -19,7 +19,7 @@ if ($result->success){
 } else {
     $errorString = "";
 
-    foreach($result->errors->deepAll() AS $error) {
+    foreach($result->errors->deepAll() as $error) {
         $errorString .= 'Error: ' . $error->code . ": " . $error->message . "\n";
     }
 
