@@ -35,9 +35,9 @@ class IndexPageTest extends PHPUnit_Framework_TestCase
         $output = curl_exec($curl);
         curl_close($curl);
 
-        $this->assertRegExp('/<form method="post" id="checkout"/', $output);
-        $this->assertRegExp('/<div id="payment-form"/', $output);
-        $this->assertRegExp('/<input type="text" name="amount" id="amount"/', $output);
+        $this->assertRegExp('/<form method="post" id="payment-form"/', $output);
+        $this->assertRegExp('/<div id="bt-dropin"/', $output);
+        $this->assertRegExp('/<input id="amount" name="amount" type="tel"/', $output);
     }
 
 }

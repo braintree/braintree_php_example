@@ -9,12 +9,8 @@ $result = Braintree\Transaction::sale([
     'paymentMethodNonce' => $nonce
 ]);
 
-if ($result->success){
+if ($result->success || !is_null($result->transaction)) {
     $transaction = $result->transaction;
-    header("Location: transaction.php?id=" . $transaction->id);
-} elseif (!is_null($result->transaction)){
-    $transaction = $result->transaction;
-    $_SESSION["errors"] = "Transaction status - " . $result->transaction->status;
     header("Location: transaction.php?id=" . $transaction->id);
 } else {
     $errorString = "";
