@@ -1,4 +1,4 @@
 composer.phar
 .env
-vendor/
+/vendor/
 *.log
