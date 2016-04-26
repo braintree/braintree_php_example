@@ -5,20 +5,29 @@ An example Braintree integration for PHP.
 
 1. Install composer within the example directory. You can find instructions on how to install composer [on composer's site](https://getcomposer.org/download/).
 
-2. Run composer
-  `php composer.phar install`
+2. Run composer:
+
+  ```sh
+  php composer.phar install
+  ```
 
   Or if you installed composer globally:
-  `composer install`
 
-3. Copy the `example.env` file to `.env` and fill in your Braintree API credentials. Credentials can be found by navigating to Account > My user > View API Keys in the Braintree control panel. Full instructions can be [found on our support site](https://articles.braintreepayments.com/control-panel/important-gateway-credentials#api-credentials).
+  ```sh
+  composer install
+  ```
 
-4. Start the internal PHP server on port 3000
-   `php -S localhost:3000 -t public_html`
+3. Copy the `example.env` file to `.env` and fill in your Braintree API credentials. Credentials can be found by navigating to Account > My User > View Authorizations in the Braintree Control Panel. Full instructions can be [found on our support site](https://articles.braintreepayments.com/control-panel/important-gateway-credentials#api-credentials).
+
+4. Start the internal PHP server on port 3000:
+
+  ```sh
+  php -S localhost:3000 -t public_html
+  ```
 
 ## Running Tests
 
-All tests are integration tests. Integration tests make api calls to Braintree and require that you set up your Braintree credentials. You can run this project's integration tests by adding your sandbox api credentials to `.env` and running `./vendor/bin/phpunit --testsuite integration` on the command line.
+All tests are integration tests. Integration tests make API calls to Braintree and require that you set up your Braintree credentials. You can run this project's integration tests by adding your sandbox API credentials to `.env` and running `./vendor/bin/phpunit --testsuite integration` on the command line.
 
 ## Pro Tips
 
