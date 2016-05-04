@@ -1,4 +1,4 @@
-# braintree_php_example
+# Braintree PHP Example
 An example Braintree integration for PHP.
 
 ## Setup Instructions
@@ -24,6 +24,12 @@ An example Braintree integration for PHP.
   ```sh
   php -S localhost:3000 -t public_html
   ```
+
+## Deploying to Heroku
+
+You can deploy this app directly to Heroku to see the app live. Skip the setup instructions above and click the button below. This will walk you through getting this app up and running on Heroku in minutes.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/braintree/braintree_php_example&env[BT_ENVIRONMENT]=sandbox)
 
 ## Running Tests
 
