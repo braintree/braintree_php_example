@@ -2,8 +2,10 @@
 session_start();
 require_once("../vendor/autoload.php");
 
-$dotenv = new Dotenv\Dotenv(__DIR__ . "/../");
-$dotenv->load();
+if(file_exists(__DIR__ . "/../.env")) {
+    $dotenv = new Dotenv\Dotenv(__DIR__ . "/../");
+    $dotenv->load();
+}
 
 Braintree\Configuration::environment(getenv('BT_ENVIRONMENT'));
 Braintree\Configuration::merchantId(getenv('BT_MERCHANT_ID'));
