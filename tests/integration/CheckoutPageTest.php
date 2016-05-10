@@ -5,8 +5,9 @@ class CheckoutPageTest extends PHPUnit_Framework_TestCase
 {
     function test_createsTransactionRedirectsToTransactionPage()
     {
+        $non_duplicate_amount = rand(1,100) . "." . rand(1,99);
         $fields = array(
-            'amount' => 10,
+            'amount' => $non_duplicate_amount,
             'payment_method_nonce' => "fake-valid-nonce"
         );
 
@@ -30,8 +31,9 @@ class CheckoutPageTest extends PHPUnit_Framework_TestCase
 
     function test_displaysSuccessMessageWhenTransactionSuceeded()
     {
+        $non_duplicate_amount = rand(1,100) . "." . rand(1,99);
         $fields = array(
-            'amount' => 10,
+            'amount' => $non_duplicate_amount,
             'payment_method_nonce' => "fake-valid-nonce"
         );
 
