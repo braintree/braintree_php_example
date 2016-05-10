@@ -1,0 +1,6 @@
+language: php
+php:
+  - '5.4'
+notifications:
+  email:
+    - "external-ci-notifications+braintree_php_example@getbraintree.com"
