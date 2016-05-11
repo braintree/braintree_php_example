@@ -1,4 +1,7 @@
 # Braintree PHP Example
+
+[![Build Status](https://travis-ci.org/braintree/braintree_php_example.svg?branch=master)](https://travis-ci.org/braintree/braintree_php_example)
+
 An example Braintree integration for PHP.
 
 ## Setup Instructions
