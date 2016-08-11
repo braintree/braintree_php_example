@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+    <script src="https://js.braintreegateway.com/js/braintree-2.27.0.min.js"></script>
     <script>
         var checkout = new Demo({
             formID: 'payment-form'
