@@ -48,6 +48,10 @@
             flow: 'vault'
           }
         }, function (createErr, instance) {
+          if (createErr) {
+            console.log('Error', createErr);
+            return;
+          }
           form.addEventListener('submit', function (event) {
             event.preventDefault();
 
