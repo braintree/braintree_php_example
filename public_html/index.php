@@ -46,6 +46,7 @@
           selector: '#bt-dropin'
         }, function (createErr, instance) {
           if (createErr) {
+            console.log(createErr);
             console.log('Create Error', createErr);
             return;
           }
