@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <script src="https://js.braintreegateway.com/web/dropin/1.2.0/js/dropin.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/dropin/1.8.0/js/dropin.min.js"></script>
     <script>
         var form = document.querySelector('#payment-form');
         var client_token = "<?php echo(Braintree\ClientToken::generate()); ?>";
@@ -46,7 +46,7 @@
           selector: '#bt-dropin'
         }, function (createErr, instance) {
           if (createErr) {
-            console.log('Error', createErr);
+            console.log('Create Error', createErr);
             return;
           }
           form.addEventListener('submit', function (event) {
@@ -54,7 +54,7 @@
 
             instance.requestPaymentMethod(function (err, payload) {
               if (err) {
-                console.log('Error', err);
+                console.log('Request Payment Method Error', err);
                 return;
               }
 
