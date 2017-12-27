@@ -6,7 +6,7 @@
     require_once("../includes/braintree_init.php");
     require_once("../includes/header.php");
     if (isset($_GET["id"])) {
-        $transaction = Braintree\Transaction::find($_GET["id"]);
+        $transaction = $gateway->transaction()->find($_GET["id"]);
 
         $transactionSuccessStatuses = [
             Braintree\Transaction::AUTHORIZED,
