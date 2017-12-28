@@ -5,8 +5,7 @@ class TransactionPageTest extends PHPUnit_Framework_TestCase
 {
     function test_showsTransactionInformation()
     {
-        global $gateway;
-        $result = $gateway->transaction()->sale([
+        $result = Braintree\Transaction::sale([
             'amount' => 10,
             'paymentMethodNonce' => 'fake-valid-nonce'
         ]);
