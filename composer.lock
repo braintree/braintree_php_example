@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de9597b36aa42da9da14c07f903e56d1",
+    "content-hash": "f7e6a8953672ad8c41e345762c505daf",
     "packages": [
         {
             "name": "braintree/braintree_php",
-            "version": "3.30.0",
+            "version": "3.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/braintree/braintree_php.git",
-                "reference": "7053be17ec7cd3040d019779bdb5cd89a3b95a94"
+                "reference": "617a8541c006d1feb2f381d9321f76a53fb6dc79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/braintree/braintree_php/zipball/7053be17ec7cd3040d019779bdb5cd89a3b95a94",
-                "reference": "7053be17ec7cd3040d019779bdb5cd89a3b95a94",
+                "url": "https://api.github.com/repos/braintree/braintree_php/zipball/617a8541c006d1feb2f381d9321f76a53fb6dc79",
+                "reference": "617a8541c006d1feb2f381d9321f76a53fb6dc79",
                 "shasum": ""
             },
             "require": {
@@ -51,7 +51,7 @@
                 }
             ],
             "description": "Braintree PHP Client Library",
-            "time": "2018-03-20T20:14:04+00:00"
+            "time": "2018-04-10T21:22:01+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
