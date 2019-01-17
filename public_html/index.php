@@ -16,7 +16,7 @@
                 </p>
             </header>
 
-            <form method="post" id="payment-form" action="/checkout.php">
+            <form method="post" id="payment-form" action="<?php echo $baseUrl;?>checkout.php">
                 <section>
                     <label for="amount">
                         <span class="input-label">Amount</span>
