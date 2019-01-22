@@ -1,9 +1,9 @@
+<?php  require_once("../includes/braintree_init.php"); ?>
 <html>
 <?php require_once("../includes/head.php"); ?>
 <body>
 
 <?php
-    require_once("../includes/braintree_init.php");
     require_once("../includes/header.php");
     if (isset($_GET["id"])) {
         $transaction = $gateway->transaction()->find($_GET["id"]);

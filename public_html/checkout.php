@@ -14,7 +14,7 @@ $result = $gateway->transaction()->sale([
 
 if ($result->success || !is_null($result->transaction)) {
     $transaction = $result->transaction;
-    header("Location: transaction.php?id=" . $transaction->id);
+    header("Location: " . $baseUrl . "transaction.php?id=" . $transaction->id);
 } else {
     $errorString = "";
 
@@ -23,5 +23,5 @@ if ($result->success || !is_null($result->transaction)) {
     }
 
     $_SESSION["errors"] = $errorString;
-    header("Location: index.php");
+    header("Location: " . $baseUrl . "index.php");
 }
