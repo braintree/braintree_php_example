@@ -1,9 +1,14 @@
 language: php
 php:
-  - '5.6'
-  - '7.2'
+- '5.6'
+- '7.2'
 before_script: composer install
 script: vendor/bin/phpunit
 notifications:
-  email:
-    - "external-ci-notifications+braintree_php_example@getbraintree.com"
+  email: false
+  slack:
+    on_success: change
+    on_failure: always
+    on_pull_requests: false
+    rooms:
+      - secure: nAnBejzN0Wlyut1jFzcm7/m+9/t4vwfFV82+wZxE1HSLwoWI6L8AjYqCoucs4mvb/tEH3ItfWUY4+CC9hecGG4r9gCscFapZgJNp4keXbrWuHp/gAzVkdtckRYA0h+Gujeue8+OnQcQ+bKkLQPM28V6gnAA/yg95GTxyWC5V5FhfLDZFX8VBnZ5OBd/cHIKN6ZsdylhOKml+pqE8R+AxXPJiZ03vj5SZEPmURJ2Fh81KvWUZpyI49S1y1OkMX0YsKqyXuyPpH7Ok9YV2FIfMxbMOTMmcUd2KdNRAwos0eqiUr/j1OsF9l7VzQvq2AS5pgstswjUrCO8BUsEkBF3XzqDTFKOBHbz7KRCmf0pOLg1X0BedMcLccLEvvXAOf+XYMJHCkrtJ+1+KfuWXR7bs8Fzox8VA+8OQQOzLushPF0Df+/tXAC+bg0wn/jn/7P96nWMdVJ+Ogc+l8qoG6SvYOPigKeivLO8RfvxzunaTFYoa0O/Q8RYsSS8W1um2lcBTXNoABdDg7/VJ+FOkWF02hwav7tHoiYpz+X72L80aYxcMuqFgwrWqW+AdT3ph8/5iJirXV6vsOehA50oEQZx+47WB+KvHP9fD7K3XT2xDTQxUu80AM/D9VrUz8MNTiAupO8aUDyRtXZbkrJXXNgaLukkYZHEDciBJyLZjG2JcIzI=
