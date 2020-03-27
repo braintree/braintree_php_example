@@ -1,7 +1,7 @@
 <?php
 require_once("tests/TestHelper.php");
 
-class TransactionPageTest extends PHPUnit_Framework_TestCase
+class TransactionPageTest extends PHPUnit\Framework\TestCase
 {
     function test_showsTransactionInformation()
     {

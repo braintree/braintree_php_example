@@ -1,4 +1,4 @@
-FROM php:5.6.25
+FROM php:7.3.16
 
 RUN apt-get update && apt-get install -y build-essential zip unzip
 

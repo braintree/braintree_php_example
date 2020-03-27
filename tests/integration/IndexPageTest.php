@@ -1,7 +1,7 @@
 <?php
 require_once("tests/TestHelper.php");
 
-class IndexPageTest extends PHPUnit_Framework_TestCase
+class IndexPageTest extends PHPUnit\Framework\TestCase
 {
     function test_returnsHttpSuccess()
     {
