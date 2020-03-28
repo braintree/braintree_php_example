@@ -1,11 +1,11 @@
 {
   "require" : {
-    "braintree/braintree_php" : "3.31.0",
-    "php": ">=5.2.1",
+    "braintree/braintree_php" : "5.0.0",
+    "php": ">=7.3.0",
     "vlucas/phpdotenv": "2.1.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "5.*",
+    "phpunit/phpunit": "7.*",
     "ext-curl": "*"
   }
 }

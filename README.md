@@ -40,7 +40,7 @@ All tests are integration tests. Integration tests make API calls to Braintree a
 
 ## Testing Transactions
 
-Sandbox transactions must be made with [sample credit card numbers](https://developers.braintreepayments.com/reference/general/testing/php#credit-card-numbers), and the response of a `Braintree_Transaction::sale()` call is dependent on the [amount of the transaction](https://developers.braintreepayments.com/reference/general/testing/php#test-amounts).
+Sandbox transactions must be made with [sample credit card numbers](https://developers.braintreepayments.com/reference/general/testing/php#credit-card-numbers), and the response of a `Braintree\Transaction::sale()` call is dependent on the [amount of the transaction](https://developers.braintreepayments.com/reference/general/testing/php#test-amounts).
 
 ## Pro Tips
 

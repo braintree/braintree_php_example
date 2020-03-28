@@ -1,7 +1,7 @@
 <?php
 require_once("tests/TestHelper.php");
 
-class CheckoutPageTest extends PHPUnit_Framework_TestCase
+class CheckoutPageTest extends PHPUnit\Framework\TestCase
 {
     function test_createsTransactionRedirectsToTransactionPage()
     {
