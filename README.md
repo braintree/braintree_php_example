@@ -28,12 +28,6 @@ An example Braintree integration for PHP.
     php -S localhost:3000 -t public_html
     ```
 
-## Deploying to Heroku
-
-You can deploy this app directly to Heroku to see the app live. Skip the setup instructions above and click the button below. This will walk you through getting this app up and running on Heroku in minutes.
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/braintree/braintree_php_example&env[BT_ENVIRONMENT]=sandbox)
-
 ## Running Tests
 
 All tests are integration tests. Integration tests make API calls to Braintree and require that you set up your Braintree credentials. You can run this project's integration tests by adding your sandbox API credentials to `.env` and running `./vendor/bin/phpunit --testsuite integration` on the command line.
