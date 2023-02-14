@@ -1,0 +1,38 @@
+name: Braintree PHP Example
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        php-version: ['8.0', '8.1', '8.2']
+
+    steps:
+      - uses: shivammathur/setup-php@v2
+      - name: Set up PHP
+        with:
+          php-version: ${{ matrix.php-version }}
+          tools: composer, phpunit
+      - name: Setup Test Env
+        run: |
+          php composer.phar install
+          composer install
+      - name: Run tests
+        env:
+          BT_ENVIRONMENT: ${{ secrets.BT_ENVIRONMENT }}
+          BT_MERCHANT_ID: ${{ secrets.BT_MERCHANT_ID }}
+          BT_PUBLIC_KEY: ${{ secrets.BT_PUBLIC_KEY }}
+          BT_PRIVATE_KEY: ${{ secrets.BT_PRIVATE_KEY }}
+        run: ./vendor/bin/phpunit --testsuite integration
