@@ -21,14 +21,14 @@ class TransactionPageTest extends PHPUnit\Framework\TestCase
         curl_close($curl);
 
         $this->assertEquals($httpStatus, 200);
-        $this->assertContains($transaction->id, $output);
-        $this->assertContains($transaction->type, $output);
-        $this->assertContains($transaction->amount, $output);
-        $this->assertContains($transaction->status, $output);
-        $this->assertContains($transaction->creditCardDetails->bin, $output);
-        $this->assertContains($transaction->creditCardDetails->last4, $output);
-        $this->assertContains($transaction->creditCardDetails->cardType, $output);
-        $this->assertContains($transaction->creditCardDetails->expirationDate, $output);
-        $this->assertContains($transaction->creditCardDetails->customerLocation, $output);
+        $this->assertStringContainsString($transaction->id, $output);
+        $this->assertStringContainsString($transaction->type, $output);
+        $this->assertStringContainsString($transaction->amount, $output);
+        $this->assertStringContainsString($transaction->status, $output);
+        $this->assertStringContainsString($transaction->creditCardDetails->bin, $output);
+        $this->assertStringContainsString($transaction->creditCardDetails->last4, $output);
+        $this->assertStringContainsString($transaction->creditCardDetails->cardType, $output);
+        $this->assertStringContainsString($transaction->creditCardDetails->expirationDate, $output);
+        $this->assertStringContainsString($transaction->creditCardDetails->customerLocation, $output);
     }
 }
