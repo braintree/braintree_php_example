@@ -1,6 +1,6 @@
 # Braintree PHP Example
 
-![Build Status](https://github.com/braintree/braintree_php_example/actions/workflows/ci.yml/badge.svg)
+[![Build Status](https://github.com/braintree/braintree_php_example/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/braintree/braintree_php_example/actions/workflows/ci.yml)
 
 An example Braintree integration for PHP.
 
